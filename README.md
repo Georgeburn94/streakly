@@ -42,42 +42,97 @@ what is streakly~
     ## User Experience (UX)
     ### User Stories
 
+    
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### User Goals
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Design
     ### Colour Scheme
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Typography
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### Imagery
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Wireframes
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Features
     ### General Features
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Future Implementation
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Technologies Used
     ### Languages Used
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Frameworks, Library and Programs
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### AI Guided
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Entity Relationship Diagram
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Deployment
     ### Deployment
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ## Testing
     ### Bugs
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Credits
     ### Code Used
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Content
 
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
+
     ### Media
+    
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### Acknowledgments
+
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
