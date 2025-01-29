@@ -1,131 +1,194 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Streakly
+what is streakly~
 
-Welcome George Gaskell,
+<p align="center">
+<a href="" target="_blank">Live project</a>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![amiresponsive](docs/)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Contents
+* [User Experience](#user-experience-ux)
+    * [User Stories](#user-stories)
+    * [User Goals](#user-goals)
 
-## Gitpod Reminders
+* [Design](#design)
+    * [Colour Scheme](#colour-scheme)
+    * [Typography](#typograhy)
+    * [Imagery](#imagery)
+    * [Wireframes](#wireframes)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Features](#features)
+    * [General Features](#general-features)
+    * [Future Implementation](#future-implementation)
 
-`python3 -m http.server`
+* [Technologies Used](#technologies-and-languages-used)
+    * [Languages Used](#languages-used)
+    * [Frameworks, library and programs](#frameworks-library-programs)
+    * [AI Guided](#ai-guided)
+    * [ERD](#entity-relationship-diagram)
 
-A blue button should appear to click: _Make Public_,
+* [Deployment](#deployment)
+    * [Deployment](#deploy)
 
-Another blue button should appear to click: _Open Browser_.
+* [Testing](#testing)
+    * [Bugs](#bugs)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [Credits](#credits)
+    * [Code Used](#code-used)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgments](#acknowledgments)
 
-A blue button should appear to click: _Make Public_,
+    ## User Experience (UX)
+    ### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+    
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    ### User Goals
 
-To log into the Heroku toolbelt CLI:
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    ## Design
+    ### Colour Scheme
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-### Connecting your Mongo database
+    ### Typography
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-------
+    ### Wireframes
+    **Desktop Wireframes**<br>
+    ![Desktop Wireframes](docs/)
 
-## Release History
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+    ### Imagery
 
-**June 18, 2024,** Add Mongo back into template
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+    ## Features
+    ### General Features
 
-**May 28 2024:** Fix Mongo and Links installs
+    ![Website Main Page](docs/website/)
+    ![Website Main Page](docs/website/)
 
-**April 26 2024:** Update node version to 16
+    ![](docs/) --CHANGE
 
-**September 20 2023:** Update Python version to 3.9.17.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+    ### Future Implementation
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    ## Technologies Used
+    ### Languages Used
+    ![Static Badge](https://img.shields.io/badge/HTML5-Language-grey?logo=html5&logoColor=%23ffffff&color=%23E34F26)
+    ![Static Badge](https://img.shields.io/badge/CSS3-Language-grey?logo=css3&logoColor=%23ffffff&color=%231572B6)
+    ![Static Badge](https://img.shields.io/badge/Python%20-%20Language%20-%20blue?logo=python&logoColor=ffffff&color=yellow)
+    ![Static Badge](https://img.shields.io/badge/Javascript%20-%20Language%20-%20charcoal?logo=Javascript&logoColor=ffffff&color=%23323330)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+    <a href="https://git-scm.com/" target=_blank_>![Static Badge](https://img.shields.io/badge/Git-v2.46.2-grey?logo=git&logoColor=%23ffffff&color=%23F05032)</a>
+    <a href="https://github.com/" target="_blank">![Static Badge](https://img.shields.io/badge/GitHub-Repo_Hosting-white?logo=github&logoColor=%23ffffff&color=%23181717)</a>
+    <a href="https://www.gitpod.io/" target="_blank">![Static Badge](https://img.shields.io/badge/Gitpod-IDE-white?logo=gitpod&logoColor=%23ffffff&color=%23FFAE33)</a>
+    <a href="https://www.djangoproject.com/" target="_blank">![Static Badge](https://img.shields.io/badge/Django%20-%20Framework%20-%20green?logo=Django&logoColor=ffffff&color=%230d432f)</a>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    ### Frameworks, Library and Programs
+    <a href="https://getbootstrap.com/" target="_blank">![Static Badge](https://img.shields.io/badge/Bootstrap-v5.3.3-grey?logo=bootstrap&logoColor=%23ffffff&color=%237952B3)</a>
+    <a href="https://www.fontawesome.com" target="_blank">![Static Badge](https://img.shields.io/badge/Font_Awesome-Icons-grey?logo=fontawesome&logoColor=%23ffffff&color=%23538DD7)</a>
+    <a href="https://fonts.google.com" target="_blank">![Static Badge](https://img.shields.io/badge/Google_Fonts-Fonts-grey?logo=googlefonts&logoColor=%23ffffff&color=%234285F4)</a>
+    <a href="https://balsamiq.com/wireframes/" target="_blank">![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-grey?logoColor=%23ffffff&color=%23CC0100)</a>
+    <a href="https://www.heroku.com" target="_blank">![Static Badge](https://img.shields.io/badge/Heroku%20-%20purple?logo=Heroku&logoColor=%23ffffff)</a>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    ### AI Guided
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    ### Entity Relationship Diagram
+    ![ERD](docs/)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    ## Deployment
+    ### Deployment
+    This [Github](https://github.com) project was created with the code institute template in mind. After some issues with editing, it was most ideal to create a separate project to implement a clean usable README.md file.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    Setup a repo using this method and template:
+    1. Login to your GitHub profile.
+    2. Navigate to the Code Institute Full Template
+    3. Click the dropdown for 'Use this template' and select "Create a new repository"
+    4. Generate the necessary name and description for your repo and click 'Create repository from template'
+    5. Navigate to the new repo and click the green 'Open' button with the Gitpod logo<br>
+    **IMPORTANT - This button should only be clicked once to generate the new IDE workspace**
+    6. You can now work on your repository within the Code Institute Gitpod IDE workspace
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    Once the project repo is created, an early deployment for the live project should performed.<br>
+    This allows for early and continuous testing using a variety of devices, as well as the Dev Tools available within browsers.
 
-------
+    Additional information on the deployment process can be found on the official [GitHub Docs](https://docs.github.com/en/pages/quickstart)
 
-## FAQ about the uptime script
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**Why have you added this script?**
+    ## Testing
+    An excellent tool to use, hidden in Google is [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview). Lighthouse is an open-source, automated tool to help you improve the quality of web pages. <br>
+    It shows you where to improve in 4 sections: Performance, Accessibility, Best practices and SEO. <br>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    Other programmes like W3C checker --CHANGE
 
-**How will this affect me?**
+    ![W3C Checker](docs/testing/)
+    ![W3C Checker](docs/testing/)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+    A quick look on pep8 (Code Institute) to see how the code we created looks, offered a few different pages corrections such as these:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    ![pep8](docs/testing/)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    ### Bugs
 
-**So….?**
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    ## Credits
+    ### Code Used
+    Project and primary learning supplied by [Code Institute](https://codeinstitute.net.ie)<br>
+    
+    Supplemental learning resources directly used/ referenced within the project:
+    - [Bootstrap Docs](https://getbootstrap.com/docs/5.3)
+    - [Gemini](https://gemini.google.com) as a learning tool, no code was directly used
+    - [Cloudinary](https://cloudinary.com/tools/image-to-webp) to convert images from jpg to webp
+    - [Deep Seek](https://chat.deepseek.com/) AI Chatbot which had a feature that went more in depth, with the chance of looking at the "thought process" before offering a solution.
 
-**Can I opt out?**
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    ### Content Research
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
-**Anything more?**
+    ### Media
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
 
----
+    ### Acknowledgments
 
-Happy coding!
+    <hr>
+    <p align="right"><a href="#streakly">Back To Top</a></p>
