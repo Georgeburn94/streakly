@@ -109,7 +109,7 @@ what is streakly~
     <a href="https://getbootstrap.com/" target="_blank">![Static Badge](https://img.shields.io/badge/Bootstrap-v5.3.3-grey?logo=bootstrap&logoColor=%23ffffff&color=%237952B3)</a>
     <a href="https://www.fontawesome.com" target="_blank">![Static Badge](https://img.shields.io/badge/Font_Awesome-Icons-grey?logo=fontawesome&logoColor=%23ffffff&color=%23538DD7)</a>
     <a href="https://fonts.google.com" target="_blank">![Static Badge](https://img.shields.io/badge/Google_Fonts-Fonts-grey?logo=googlefonts&logoColor=%23ffffff&color=%234285F4)</a>
-    <a href="https://www.canva.com" target="_blank">![Static Badge](https://img.shields.io/badge/Canva%20-%20Framework?logo=Canva&logoColor=%23ffffff&label=Framework&color=rgb(43%2C%203%2C%2073))</a>
+    <a href="https://balsamiq.com/wireframes/" target="_blank">![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-grey?logoColor=%23ffffff&color=%23CC0100)</a>
     <a href="https://www.heroku.com" target="_blank">![Static Badge](https://img.shields.io/badge/Heroku%20-%20purple?logo=Heroku&logoColor=%23ffffff)</a>
 
     <hr>
