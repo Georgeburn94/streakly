@@ -121,13 +121,13 @@ what is streakly~
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### Entity Relationship Diagram
-    ![ERD](docs/)
+    ![ERD](docs/ss-and-admin/diagram.webp)
 
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Deployment
-    ### Deployment
+    ### Deploy
     This [Github](https://github.com) project was created with the code institute template in mind. After some issues with editing, it was most ideal to create a separate project to implement a clean usable README.md file.
 
     Setup a repo using this method and template:
