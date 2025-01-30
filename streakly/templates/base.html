@@ -28,9 +28,9 @@
         <nav class="navbar">
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'account_login' %}">Login</a></li>
-                <li><a href="{% url 'account_signup' %}">Register</a></li>
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <li><a href="{% url 'account_login' %}">Login</a></li> <!-- About page? then move login and register to separate spaces, -->
+                <li><a href="{% url 'account_signup' %}">Register</a></li> <!-- So that Logout can be deleted and only active whwn user is -->
+                <li><a href="{% url 'account_logout' %}">Logout</a></li> <!-- logged in? -->
             </ul>
         </nav>
     </header>
