@@ -16,6 +16,7 @@ class Habit(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='habits')  # Link to the user who created the habit
     name = models.CharField(max_length=100)  # Name of the habit (e.g., "Drink water")
     description = models.TextField(blank=True, null=True)  # Optional description
+    completed = models.BooleanField(default=False)  # Whether the habit was completed on this date
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='other')  # Category of the habit
     created_at = models.DateTimeField(auto_now_add=True)  # Timestamp when the habit was created
     streak = models.PositiveIntegerField(default=0)  # Current streak for the habit
