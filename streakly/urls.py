@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import home_page_view
+from . import views
 
 urlpatterns = [
-    path('', home_page_view, name='home'),
+    path('', views.home_page_view, name='home'),
+    path('add/', views.add_habit, name='add_habit'),
+    path('habits/', views.habit_list, name='habit_list'),
+    path('mark_complete/<int:habit_id>/', views.mark_complete, name='mark_complete'),
 ]
