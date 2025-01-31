@@ -9,15 +9,15 @@ from datetime import date  # Import date from datetime
 from django.contrib.auth.models import User
 
 
-# Create your views here.
-def home_page_view(request):
-    return render(request, 'home.html')
+# Home page
 
+# List of habits
 @login_required
 def habit_list(request):
     habits = Habit.objects.filter(user=request.user)
-    return render(request, 'habit_list.html', {'habits': habits})
+    return render(request, 'home.html', {'habits': habits})
 
+# Form to add a new habit
 @login_required
 def add_habit(request):
     if request.method == 'POST':
@@ -31,6 +31,7 @@ def add_habit(request):
         form = HabitForm()
     return render(request, 'add_habit.html', {'form': form})
 
+# Mark habit complete or incomplete
 @login_required
 def mark_complete(request, habit_id):
     habit = get_object_or_404(Habit, id=habit_id, user=request.user)
@@ -61,4 +62,4 @@ def mark_complete(request, habit_id):
         # Recalculate the streak when the habit is marked as completed
         calculate_streak(habit)
 
-    return redirect('habit_list')
+    return redirect('home')
