@@ -13,6 +13,30 @@ body {
     background-color: cornflowerblue;
 }
 
+.day-square {
+    width: 100%;
+    padding-top: 100%; /* Makes the square */
+    border: 1px solid #333;
+    position: relative;}
+
+.completed {
+    background-color: #28a745;
+}
+
+.day-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.calendar_container {
+    display: grid; 
+    grid-template-columns: repeat(31, 1fr);
+    gap: 5px; max-width: 100vw;
+    margin: 1.5rem;
+}
 /* @media query {
 
 }
