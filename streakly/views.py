@@ -7,6 +7,10 @@ from django.utils import timezone
 from .calculate_streak import calculate_streak  # Import the calculate_streak function
 from datetime import date  # Import date from datetime
 from django.contrib.auth.models import User
+from calendar import monthrange
+from datetime import date, timedelta
+
+
 
 
 # Home page
@@ -26,7 +30,7 @@ def add_habit(request):
             habit = form.save(commit=False)
             habit.user = request.user
             habit.save()
-            return redirect('habit_list')
+            return redirect('home')
     else:
         form = HabitForm()
     return render(request, 'add_habit.html', {'form': form})
@@ -63,3 +67,39 @@ def mark_complete(request, habit_id):
         calculate_streak(habit)
 
     return redirect('home')
+
+# Habit calendar
+def habit_calendar(request, habit_id):
+    habit = get_object_or_404(Habit, id=habit_id, user=request.user)
+    
+    # Get the current year and month
+    today = date.today()
+    year = today.year
+    month = today.month
+
+    # Get the number of days in the current month
+    _, num_days = monthrange(year, month)
+
+    # Create a list of dates for the current month
+    dates_in_month = [date(year, month, day) for day in range(1, num_days + 1)]
+
+    # Create a dictionary to track completed dates
+    completed_dates = {
+        completion.date: completion.completed
+        for completion in habit.completions.filter(date__year=year, date__month=month)
+    }
+
+    # Prepare the calendar data
+    calendar_data = []
+    for day_date in dates_in_month:
+        calendar_data.append({
+            'date': day_date,
+            'completed': completed_dates.get(day_date, False),
+        })
+
+    return render(request, 'habit_calendar.html', {
+        'habit': habit,
+        'calendar_data': calendar_data,
+        'year': year,
+        'month': month,
+    })

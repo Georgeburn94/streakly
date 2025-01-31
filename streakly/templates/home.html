@@ -18,6 +18,7 @@
         {{ habit.name }} - {% if habit.completed %}Completed - {{ habit.streak }} days{% else %}Not Completed{% endif %}
         <a href="{% url 'mark_complete' habit.id %}">{% if habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}</a>
         <p>{{ habit.streak }}</p>
+        <a href="{% url 'habit_calendar' habit.id %}">View Calendar</a>
     </li>
     {% endfor %}
 </ul>
