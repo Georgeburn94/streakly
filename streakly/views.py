@@ -13,7 +13,7 @@ from datetime import date, timedelta
 # Home page
 @login_required
 def home(request):
-    habits = Habit.objects.filter(user=request.user)
+    habits = Habit.objects.filter(user=request.user).order_by('created_at')
     
     # Get the current year and month
     today = date.today()

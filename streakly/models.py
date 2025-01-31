@@ -21,6 +21,9 @@ class Habit(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)  # Timestamp when the habit was created
     streak = models.PositiveIntegerField(default=0)  # Current streak for the habit
 
+    class Meta:
+        ordering = ['created_at']  # Order by creation date
+
     def __str__(self):
         return f"{self.name} (User: {self.user.username}, Category: {self.get_category_display()})"
 
