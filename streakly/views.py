@@ -50,11 +50,15 @@ def mark_complete(request, habit_id):
     if not habit.completed:
         # If the habit is toggled to "not completed," delete the HabitCompletion for today
         completion.delete()
+        # Decrease the streak by 1 if the streak is greater than 0
+        if habit.streak > 0:
+            habit.streak -= 1
+            habit.save()
     else:
         # If the habit is toggled to "completed," ensure the HabitCompletion is marked as completed
         completion.completed = True
         completion.save()
-        # Recalculate the streak only when the habit is marked as completed
+        # Recalculate the streak when the habit is marked as completed
         calculate_streak(habit)
 
     return redirect('habit_list')
