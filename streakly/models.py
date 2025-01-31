@@ -27,7 +27,7 @@ class Habit(models.Model):
 
 class HabitCompletion(models.Model):
     habit = models.ForeignKey(Habit, on_delete=models.CASCADE, related_name='completions')  # Link to the habit
-    date = models.DateField(auto_now_add=True)  # Date when the habit was completed
+    date = models.DateField()  # Date when the habit was completed
     completed = models.BooleanField(default=False)  # Whether the habit was completed on this date
 
     def __str__(self):
