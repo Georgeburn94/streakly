@@ -10,16 +10,49 @@ from django.contrib.auth.models import User
 from calendar import monthrange
 from datetime import date, timedelta
 
-
-
-
 # Home page
-
-# List of habits
 @login_required
-def habit_list(request):
+def home(request):
     habits = Habit.objects.filter(user=request.user)
-    return render(request, 'home.html', {'habits': habits})
+    
+    # Get the current year and month
+    today = date.today()
+    year = today.year
+    month = today.month
+
+    all_habits_data = []
+
+    for habit in habits:
+        # Get the number of days in the current month
+        _, num_days = monthrange(year, month)
+
+        # Create a list of dates for the current month
+        dates_in_month = [date(year, month, day) for day in range(1, num_days + 1)]
+
+        # Create a dictionary to track completed dates
+        completed_dates = {
+            completion.date: completion.completed
+            for completion in habit.completions.filter(date__year=year, date__month=month)
+        }
+
+        # Prepare the calendar data for the habit
+        calendar_data = []
+        for day_date in dates_in_month:
+            calendar_data.append({
+                'date': day_date,
+                'completed': completed_dates.get(day_date, False),
+            })
+
+        all_habits_data.append({
+            'habit': habit,
+            'calendar_data': calendar_data,
+        })
+
+    return render(request, 'home.html', {
+        'all_habits_data': all_habits_data,
+        'year': year,
+        'month': month,
+    })
 
 # Form to add a new habit
 @login_required
@@ -68,38 +101,3 @@ def mark_complete(request, habit_id):
 
     return redirect('home')
 
-# Habit calendar
-def habit_calendar(request, habit_id):
-    habit = get_object_or_404(Habit, id=habit_id, user=request.user)
-    
-    # Get the current year and month
-    today = date.today()
-    year = today.year
-    month = today.month
-
-    # Get the number of days in the current month
-    _, num_days = monthrange(year, month)
-
-    # Create a list of dates for the current month
-    dates_in_month = [date(year, month, day) for day in range(1, num_days + 1)]
-
-    # Create a dictionary to track completed dates
-    completed_dates = {
-        completion.date: completion.completed
-        for completion in habit.completions.filter(date__year=year, date__month=month)
-    }
-
-    # Prepare the calendar data
-    calendar_data = []
-    for day_date in dates_in_month:
-        calendar_data.append({
-            'date': day_date,
-            'completed': completed_dates.get(day_date, False),
-        })
-
-    return render(request, 'habit_calendar.html', {
-        'habit': habit,
-        'calendar_data': calendar_data,
-        'year': year,
-        'month': month,
-    })

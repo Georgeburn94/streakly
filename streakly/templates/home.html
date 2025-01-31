@@ -4,25 +4,27 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
-
-
-
 {% block title %}Habits{% endblock %}
 
 {% block content %}
 <h1>Your Habits</h1>
 <a href="{% url 'add_habit' %}">Add Habit</a>
 <ul>
-    {% for habit in habits %}
+    {% for habit_data in all_habits_data %}
     <li>
-        {{ habit.name }} - {% if habit.completed %}Completed - {{ habit.streak }} days{% else %}Not Completed{% endif %}
-        <a href="{% url 'mark_complete' habit.id %}">{% if habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}</a>
-        <p>{{ habit.streak }}</p>
-        <a href="{% url 'habit_calendar' habit.id %}">View Calendar</a>
+        {{ habit_data.habit.name }} - {% if habit_data.habit.completed %}Completed - {{ habit_data.habit.streak }} days{% else %}Not Completed{% endif %}
+        <a href="{% url 'mark_complete' habit_data.habit.id %}">{% if habit_data.habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}</a>
+        <p>{{ habit_data.habit.streak }}</p>
     </li>
+    <div class="calendar_container">
+        {% for day in habit_data.calendar_data %}
+        <div class="day-square {% if day.completed %}completed{% else %}{% endif %}">
+            <span class="day-number">
+                {{ day.date.day }}
+            </span>
+        </div>
+        {% endfor %}
+    </div>
     {% endfor %}
 </ul>
-
-
-
 {% endblock %}
