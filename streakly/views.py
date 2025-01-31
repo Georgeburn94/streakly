@@ -54,8 +54,7 @@ def mark_complete(request, habit_id):
         # If the habit is toggled to "completed," ensure the HabitCompletion is marked as completed
         completion.completed = True
         completion.save()
-
-    # Recalculate the streak for the habit
-    calculate_streak(habit)
+        # Recalculate the streak only when the habit is marked as completed
+        calculate_streak(habit)
 
     return redirect('habit_list')
