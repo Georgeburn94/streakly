@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+.navbar { /* Temporary css class, if not needed */
+    background-color: cornflowerblue;
+}
+
 /* @media query {
 
 }
