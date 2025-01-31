@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Habit, HabitCompletion
@@ -33,15 +33,29 @@ def add_habit(request):
 
 @login_required
 def mark_complete(request, habit_id):
-    habit = Habit.objects.get(id=habit_id)
-    # Create a new HabitCompletion instance for today
+    habit = get_object_or_404(Habit, id=habit_id, user=request.user)
+    
+    # Toggle the habit's completed status
+    habit.completed = not habit.completed
+    habit.save()
+
+    # Get or create the HabitCompletion instance for today
+    today = date.today()
     completion, created = HabitCompletion.objects.get_or_create(
         habit=habit,
-        date=date.today(),
+        date=today,
         defaults={'completed': True}
     )
-    if not created:
+
+    if not habit.completed:
+        # If the habit is toggled to "not completed," delete the HabitCompletion for today
+        completion.delete()
+    else:
+        # If the habit is toggled to "completed," ensure the HabitCompletion is marked as completed
         completion.completed = True
         completion.save()
-    calculate_streak(habit)  # Call the calculate_streak function
+
+    # Recalculate the streak for the habit
+    calculate_streak(habit)
+
     return redirect('habit_list')

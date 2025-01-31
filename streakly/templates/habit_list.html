@@ -8,9 +8,8 @@
 <ul>
     {% for habit in habits %}
     <li>
-        {{ habit.name }} - {% if habit.completed %}Completed{% else %}Not Completed{% endif %}
-        {{ habit.streak }} days
-        <a href="{% url 'mark_complete' habit.id %}">Mark Complete</a>
+        {{ habit.name }} - {% if habit.completed %}Completed - {{ habit.streak }} days{% else %}Not Completed{% endif %}
+        <a href="{% url 'mark_complete' habit.id %}">{% if habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}</a>
     </li>
     {% endfor %}
 </ul>
