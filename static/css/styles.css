@@ -400,6 +400,115 @@ h1 {
   }
 }
 
+
+
+/* Log in */
+
+/* Login Page Specific Styles */
+.login-page {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-page .container {
+  max-width: 400px;
+  width: 100%;
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.login-page h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-page .login {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-page .login p {
+  margin-bottom: 0.5rem;
+}
+
+.login-page .login input {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.login-page .login label {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.login-page .button.secondaryAction {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+}
+
+.login-page .primaryAction {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--background-color);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-page .primaryAction:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 80%, white);
+  transform: translateY(-2px);
+}
+
+.login-page .socialaccount_providers {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-page .login-or {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 1rem 0;
+  position: relative;
+}
+
+.login-page .login-or::before,
+.login-page .login-or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.login-page .login-or::before {
+  left: 0;
+}
+
+.login-page .login-or::after {
+  right: 0;
+}
+
+
+/* log out  */
+
+
 /* Footer */
 .footer {
   background: var(--surface-color);
