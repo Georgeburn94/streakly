@@ -310,7 +310,7 @@ h1 {
 .mark-complete-btn {
   padding: 0.7rem 1.2rem;
   border-radius: var(--border-radius);
-  background-color: rgba(187, 134, 252, 0.2);
+  background-color: #bb86fc;
   color: var(--background-color);
   text-decoration: none;
   font-weight: 500;
@@ -328,7 +328,7 @@ h1 {
 }
 
 .mark-complete-btn.completed {
-  background-color: var(--surface-color);
+  background-color: #bb86fc;
   border: 1px solid var(--border-color);
 }
 
