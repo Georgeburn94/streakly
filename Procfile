@@ -1,1 +1,1 @@
-web: gunicorn streakly.wsgi
+web: gunicorn config.wsgi
