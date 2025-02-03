@@ -2,7 +2,7 @@
 what is streakly~
 
 <p align="center">
-<a href="" target="_blank">Live project</a>
+<a href="https://streakly-17f4cb89efa1.herokuapp.com/" target="_blank">Live project</a>
 
 ![amiresponsive](docs/)
 
@@ -41,9 +41,18 @@ what is streakly~
 
     ## User Experience (UX)
     ### User Stories
-
-    
     <hr>
+    <ul>
+    <li>As a <strong>user</strong> I can <strong>add a new habit</strong> so I can <strong>track my progress over time</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>mark a habit as completed for a specific day</strong>, so that I can <strong>keep track of my consistency.</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>see my streak</strong> so that I can <strong>stay motivated</strong>.
+    <li>As a <strong>user</strong>, I can <strong>organise my habits into categories (e.g., health, productivity)</strong>, so that I can <strong>track different aspects of my life separately.</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>log in and log out of my account</strong>, so that <strong>my habit data remains private and accessible only to me.</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>create an account</strong>, so that <strong>I can track my habits securely.</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>see a weekly view of my habit completions</strong>, so that I can <strong>track my short-term progress visually.</strong></li>
+    <li>As a <strong>user</strong>, I can <strong>edit or delete a habit</strong>, so that I can <strong>update my tracking based on changes in my routine.</strong></li>
+    <li>As a <strong>mobile user</strong>, I can <strong>use a simple and mobile-friendly design</strong>, so that I can <strong>log my habits easily from any device.</strong></li>
+    </ul>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### User Goals
@@ -53,12 +62,19 @@ what is streakly~
 
     ## Design
     ### Colour Scheme
-
+    ![colour scheme swatch](static/images/AdobeColor-streakly.jpeg)
+    <hr>
+    <p>This colour palette combines the bold vibrancy of electric green (#05F26C) and rich lavender (#B385F2) against a sleek contrast of deep black (#121212) and crisp white (#FFFFFF).</p>
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### Typography
-
+    <hr>
+    <p>We chose the 'Inter' font for its high degree of readability and modern aesthetic.</p><br>
+    <span style="font-family: 'Inter',; font-size: 2em;">Heading 1</span><br>
+    <span style="font-family: 'Inter',; font-size: 1.5em;">Heading 2</span><br>
+    <span style="font-family: 'Inter',; font-size: 1.17em;">Heading 3</span><br>
+    <span style="font-family: 'Inter',;">Streakly is a habit tracking app</span><br>
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
@@ -69,18 +85,14 @@ what is streakly~
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
-    ### Imagery
-
-    <hr>
-    <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Features
     ### General Features
 
-    ![Website Main Page](docs/website/)
-    ![Website Main Page](docs/website/)
+    #### Habit Tracking Calendar
+    ![Habit Calendar](static/images/habit_calendar.jpg)
+    <p>Each habit displays a calendar, showing the days of the current month. Marking the habit as complete marks the current day as completed. A score is generated based on the consecutive number of days completed.</p> 
 
-    ![](docs/) --CHANGE
 
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
@@ -88,6 +100,10 @@ what is streakly~
     ### Future Implementation
 
     <hr>
+    #### Friends List
+    <p>Our original idea was to implement a friends list feature, so that users could see the streaks of their friends and compete with them. Due to time constraints we weren't able to implement this feature, but we hope to in future</p>
+    #### Encouraging Messages
+    <p>We hope to create conditional messages that appear for the user when they hit certain targets. This could be 7 consecutive days, or a set monthly %age completed.</p>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Technologies Used
@@ -116,7 +132,7 @@ what is streakly~
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### AI Guided
-
+    
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
@@ -143,6 +159,9 @@ what is streakly~
     This allows for early and continuous testing using a variety of devices, as well as the Dev Tools available within browsers.
 
     Additional information on the deployment process can be found on the official [GitHub Docs](https://docs.github.com/en/pages/quickstart)
+
+    ### Deployment with Heroku
+    <p>We used Heroku for our production server. However, we encountered a deployment issue with the latest version of Python, which prompted us to downgrade to version 3.12.2, resolving the compatibility problem and ensuring successful deployment.</p>
 
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
