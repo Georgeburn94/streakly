@@ -101,3 +101,9 @@ def mark_complete(request, habit_id):
 
     return redirect('home')
 
+@login_required
+def delete_habit(request, habit_id):
+    habit = get_object_or_404(Habit, id=habit_id, user=request.user)
+    habit.delete()
+    return redirect('home')
+
