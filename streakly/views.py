@@ -101,3 +101,5 @@ def mark_complete(request, habit_id):
 
     return redirect('home')
 
+def about(request):
+    return render(request, 'about.html')

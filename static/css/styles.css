@@ -332,6 +332,15 @@ h1 {
   border: 1px solid var(--border-color);
 }
 
+.about-text {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.card-title {
+  color: var(--text-color)
+}
+
 /* Calendar Container adjustments */
 .calendar_container {
   margin-top: 0.5rem;

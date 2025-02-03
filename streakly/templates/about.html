@@ -1,8 +1,56 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container my-5">
+    <!-- About Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">About Streakly</h1>
+        <p class="lead">Your go-to app for building and maintaining habits effortlessly.</p>
+    </div>
 
+    <!-- About Streakly Card -->
+    <div class="card shadow mb-5 habit-item">
+        <div class="card-body">
+            <h2 class="card-title h4 mb-4">About Streakly</h2>
+            <p class="about-text">
+                Streakly is a habit-tracking app developed as our collaborative hackathon project for the Code
+                Institute's 4-month bootcamp in full-stack web development. Built with a modern tech stack including
+                HTML, CSS, Bootstrap, Django, Python, and PostgreSQL, Streakly features a responsive and user-friendly
+                interface. Django and PostgreSQL ensure a robust and scalable backend. Developed collaboratively with
+                agile methodologies, Streakly empowers users to build and maintain habits effortlessly, offering a
+                visually appealing and intuitive platform to track progress and grow streaks. It’s not just an app—it’s
+                the result of dedication, collaboration, and a passion for creating meaningful solutions. Start building
+                your streaks today with Streakly!
+            </p>
+        </div>
+    </div>
 
+    <!-- Team Members Card -->
+    <div class="card shadow mb-5 habit-item">
+        <div class="card-body">
+            <h2 class="card-title h4 mb-4">Team Members</h2>
+            <ul class="list-unstyled about-text">
+                <li class="mb-3">👩‍💻 <strong>Amanda</strong> - Navigation and Documentation</li>
+                <li class="mb-3">👩‍💻 <strong>George</strong> - Backend Developer</li>
+                <li class="mb-3">👩‍💻 <strong>Maebh</strong> - Frontend Developer</li>
+                <li class="mb-3">👩‍💻 <strong>Prabhin</strong> - Frontend Developer</li>
+            </ul>
+        </div>
+    </div>
 
-
+    <!-- Technologies Used Card -->
+    <div class="card shadow mb-5 habit-item">
+        <div class="card-body">
+            <h2 class="card-title h4 mb-4">Technologies Used</h2>
+            <ul class="list-inline">
+                <li class="list-inline-item badge bg-primary me-2 mb-2">HTML</li>
+                <li class="list-inline-item badge bg-secondary me-2 mb-2">CSS</li>
+                <li class="list-inline-item badge bg-success me-2 mb-2">Bootstrap</li>
+                <li class="list-inline-item badge bg-danger me-2 mb-2">Django</li>
+                <li class="list-inline-item badge bg-warning me-2 mb-2">Python</li>
+                <li class="list-inline-item badge bg-info me-2 mb-2">PostgreSQL</li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}

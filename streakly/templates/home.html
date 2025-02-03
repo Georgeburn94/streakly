@@ -15,7 +15,8 @@
             <div class="habit-info">
                 <h2 class="habit-name">{{ habit_data.habit.name }}</h2>
                 <div class="habit-status">
-                    <span class="status-badge {% if habit_data.habit.completed %}completed{% else %}not-completed{% endif %}">
+                    <span
+                        class="status-badge {% if habit_data.habit.completed %}completed{% else %}not-completed{% endif %}">
                         {% if habit_data.habit.completed %}Completed{% else %}Not Completed{% endif %}
                     </span>
                     {% if habit_data.habit.streak > 0 %}
@@ -27,8 +28,8 @@
                 </div>
             </div>
             <div class="habit-actions">
-                <a href="{% url 'mark_complete' habit_data.habit.id %}" 
-                   class="mark-complete-btn {% if habit_data.habit.completed %}completed{% endif %}">
+                <a href="{% url 'mark_complete' habit_data.habit.id %}"
+                    class="mark-complete-btn {% if habit_data.habit.completed %}completed{% endif %}">
                     <i class="fas {% if habit_data.habit.completed %}fa-times{% else %}fa-check{% endif %}"></i>
                     {% if habit_data.habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}
                 </a>
