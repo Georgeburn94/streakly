@@ -1,30 +1,49 @@
 {% extends 'base.html' %}
 
-{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %}
-
 {% block title %}Habits{% endblock %}
 
 {% block content %}
-<h1>Your Habits</h1>
-<a href="{% url 'add_habit' %}">Add Habit</a>
-<ul>
+<div class="habit-header">
+    <h1>Your Habits</h1>
+    <a href="{% url 'add_habit' %}" class="btn btn-primary">Add Habit</a>
+</div>
+
+<ul class="habit-list">
     {% for habit_data in all_habits_data %}
-    <li>
-        {{ habit_data.habit.name }} - {% if habit_data.habit.completed %}Completed - {{ habit_data.habit.streak }} days{% else %}Not Completed{% endif %}
-        <a href="{% url 'mark_complete' habit_data.habit.id %}">{% if habit_data.habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}</a>
-        <p>{{ habit_data.habit.streak }}</p>
-    </li>
-    <div class="calendar_container">
-        {% for day in habit_data.calendar_data %}
-        <div class="day-square {% if day.completed %}completed{% else %}{% endif %}">
-            <span class="day-number">
-                {{ day.date.day }}
-            </span>
+    <li class="habit-item">
+        <div class="habit-details">
+            <div class="habit-info">
+                <h2 class="habit-name">{{ habit_data.habit.name }}</h2>
+                <div class="habit-status">
+                    <span class="status-badge {% if habit_data.habit.completed %}completed{% else %}not-completed{% endif %}">
+                        {% if habit_data.habit.completed %}Completed{% else %}Not Completed{% endif %}
+                    </span>
+                    {% if habit_data.habit.streak > 0 %}
+                    <span class="streak-counter">
+                        <i class="fas fa-fire"></i>
+                        {{ habit_data.habit.streak }} day streak
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="habit-actions">
+                <a href="{% url 'mark_complete' habit_data.habit.id %}" 
+                   class="mark-complete-btn {% if habit_data.habit.completed %}completed{% endif %}">
+                    <i class="fas {% if habit_data.habit.completed %}fa-times{% else %}fa-check{% endif %}"></i>
+                    {% if habit_data.habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}
+                </a>
+            </div>
         </div>
-        {% endfor %}
-    </div>
+        <div class="calendar_container">
+            {% for day in habit_data.calendar_data %}
+            <div class="day-square {% if day.completed %}completed{% else %}{% endif %}">
+                <span class="day-number">
+                    {{ day.date.day }}
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}
