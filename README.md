@@ -167,10 +167,14 @@ what is streakly~
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ## Testing
-    An excellent tool to use, hidden in Google is [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview). Lighthouse is an open-source, automated tool to help you improve the quality of web pages. <br>
-    It shows you where to improve in 4 sections: Performance, Accessibility, Best practices and SEO. <br>
+    ### Pytest
+    <p>We did our testing using Pytest. We tested the functions of each of the views. The testing code was automatically generatred using Copilot</p>
 
-    Other programmes like W3C checker --CHANGE
+    ![pytest_result](static/images/pytest.jpg)
+
+    <p>Testing code</p>
+
+    ![test_code](static/images/pytest_code.jpg)
 
     ![W3C Checker](docs/testing/)
     ![W3C Checker](docs/testing/)

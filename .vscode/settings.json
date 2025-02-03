@@ -15,4 +15,13 @@
    "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
+   "python.testing.unittestArgs": [
+      "-v",
+      "-s",
+      "./streakly",
+      "-p",
+      "test*.py"
+   ],
+   "python.testing.pytestEnabled": false,
+   "python.testing.unittestEnabled": true,
 }
