@@ -335,6 +335,12 @@ h1 {
   border: 1px solid var(--border-color);
 }
 
+
+/* delete modal */
+.cancel-button {
+  background-color: #bb86fc;
+}
+
 /* Calendar Container adjustments */
 .calendar_container {
   margin-top: 0.5rem;
