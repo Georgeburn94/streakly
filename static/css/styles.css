@@ -232,31 +232,127 @@ h1 {
 .habit-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .habit-item {
   background: var(--surface-color);
-  padding: 1.5rem;
-  margin-bottom: 1rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  padding: 2rem;
+  box-shadow: var(--shadow);
 }
 
-.habit-header {
+.habit-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.streak-badge {
-  background: var(--secondary-color);
-  color: #000000;
+.habit-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.habit-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.habit-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-badge {
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 2rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  box-shadow: 0 0 10px rgba(3, 218, 198, 0.3);
+}
+
+.status-badge.completed {
+  background-color: var(--success-color);
+  color: var(--background-color);
+}
+
+.status-badge.not-completed {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+.streak-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.streak-counter i {
+  color: var(--secondary-color);
+}
+
+.habit-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.mark-complete-btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(187, 134, 252, 0.2);
+  color: var(--background-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mark-complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.4);
+}
+
+.mark-complete-btn.completed {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Calendar Container adjustments */
+.calendar_container {
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .habit-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .habit-actions {
+    width: 100%;
+  }
+
+  .mark-complete-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Responsive Design */
