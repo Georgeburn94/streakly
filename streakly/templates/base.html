@@ -53,11 +53,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{% url 'about' %}">
                                 <i class="fas fa-info-circle"></i> About
                             </a>
                         </li>
-
+                    </ul>
+                    <ul class="navbar-nav me-2">
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_habit' %}">
@@ -88,6 +89,7 @@
                                 <i class="fas fa-user-plus"></i> Register
                             </a>
                         </li>
+
                         {% endif %}
                     </ul>
                 </div>
@@ -109,6 +111,8 @@
         {% block content %}
         {% endblock %}
     </div>
+
+
     <footer class="footer">
     </footer>
     <!-- Bootstrap JS -->
