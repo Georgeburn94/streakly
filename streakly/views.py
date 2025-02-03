@@ -9,6 +9,7 @@ from datetime import date  # Import date from datetime
 from django.contrib.auth.models import User
 from calendar import monthrange
 from datetime import date, timedelta
+from django.contrib import messages
 
 # Home page
 @login_required
@@ -63,6 +64,7 @@ def add_habit(request):
             habit = form.save(commit=False)
             habit.user = request.user
             habit.save()
+            messages.success(request, 'Habit added successfully!')
             return redirect('home')
     else:
         form = HabitForm()
@@ -105,5 +107,6 @@ def mark_complete(request, habit_id):
 def delete_habit(request, habit_id):
     habit = get_object_or_404(Habit, id=habit_id, user=request.user)
     habit.delete()
+    messages.success(request, 'Habit deleted successfully!')
     return redirect('home')
 

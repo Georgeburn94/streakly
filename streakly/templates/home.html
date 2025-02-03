@@ -51,6 +51,7 @@
 </ul>
 
 
+
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -70,14 +71,16 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        $('#deleteModal').on('show.bs.modal', function (event) {
+    document.addEventListener('DOMContentLoaded', function() {
+        $('#deleteModal').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget);
             var habitId = button.data('habit-id');
             var deleteUrl = "{% url 'delete_habit' 0 %}".replace('0', habitId);
             var confirmDeleteButton = document.getElementById('confirmDeleteButton');
             confirmDeleteButton.href = deleteUrl;
         });
+
+
     });
 </script>
 
