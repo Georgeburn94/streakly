@@ -107,3 +107,5 @@ def delete_habit(request, habit_id):
     habit.delete()
     return redirect('home')
 
+def about(request):
+    return render(request, 'about.html')
