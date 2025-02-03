@@ -24,8 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Navigation */
-/* Navbar Styles */
+
 /* Navbar Styles */
 .navbar {
   background-color: var(--surface-color);
@@ -177,6 +176,10 @@ h1 {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 15px rgba(187, 134, 252, 0.4);
+}
+
+.delete-button {
+  background-color: #03dac6;
 }
 
 /* Calendar Styles */

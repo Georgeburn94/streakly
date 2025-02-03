@@ -33,7 +33,7 @@
                     <i class="fas {% if habit_data.habit.completed %}fa-times{% else %}fa-check{% endif %}"></i>
                     {% if habit_data.habit.completed %}Mark Not Complete{% else %}Mark Complete{% endif %}
                 </a>
-                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                <button class="btn delete-button" data-toggle="modal" data-target="#deleteModal"
                     data-habit-id="{{ habit_data.habit.id }}">Delete Habit</button>
             </div>
         </div>
