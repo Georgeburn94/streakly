@@ -42,6 +42,8 @@ what is streakly~
     ## User Experience (UX)
     ### User Stories
     <hr>
+    GitHub Project boards were used for our Agile Methodology. 
+    <hr>
     <ul>
     <li>As a <strong>user</strong> I can <strong>add a new habit</strong> so I can <strong>track my progress over time</strong></li>
     <li>As a <strong>user</strong>, I can <strong>mark a habit as completed for a specific day</strong>, so that I can <strong>keep track of my consistency.</strong></li>
@@ -79,9 +81,11 @@ what is streakly~
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
     ### Wireframes
-    **Desktop Wireframes**<br>
-    ![Desktop Wireframes](docs/)
+    Desktop Wireframe
+    ![desktop_wireframe](static/images/wireframe_calendar.jpg)
 
+    Mobile Wireframe
+    ![mobile_wireframe](static/images/wireframe_calendar_mobile.jpg)
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
@@ -131,8 +135,10 @@ what is streakly~
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
-    ### AI Guided
-    
+    ### AI Reflection
+    <p>During this hackathon, AI played a crucial role in speeding up development and troubleshooting. Django’s detailed tracebacks were sometimes overwhelming, but AI helped us quickly interpret them, pinpointing the root causes of errors and suggesting fixes. It also streamlined our testing process with pytest—rather than spending time learning test syntax, we leveraged AI to generate and run tests automatically, ensuring our code was robust without diverting focus from feature development. This allowed us to work more efficiently, solving issues faster and maintaining momentum throughout the event.</p>
+
+
     <hr>
     <p align="right"><a href="#streakly">Back To Top</a></p>
 
@@ -172,9 +178,16 @@ what is streakly~
 
     ![pytest_result](static/images/pytest.jpg)
 
+
     <p>Testing code</p>
 
+<br>
+
+<p>We created tests which checked whether the function of each Django view executed correctly. The succesfull test result shown above demonstrate habits have CRUD functionality.
+
     ![test_code](static/images/pytest_code.jpg)
+
+    
 
     ![W3C Checker](docs/testing/)
     ![W3C Checker](docs/testing/)
