@@ -1,8 +1,8 @@
 # Streakly
-what is streakly~
+<p>Streakly is a habit-tracking app designed to help users build and maintain positive routines by tracking their daily progress and streaks. It was developed collaboratively using Agile methodology, as the final hackathon on the Code Institute 4 Month Full-Stack Bootcamp.</p>
 
 <p align="center">
-<a href="https://streakly-17f4cb89efa1.herokuapp.com/" target="_blank">Live project</a>
+<a href="https://streakly-17f4cb89efa1.herokuapp.com/" target="_blank">Live project</a></p>
 
 ![amiresponsive](docs/)
 
@@ -14,7 +14,6 @@ what is streakly~
 * [Design](#design)
     * [Colour Scheme](#colour-scheme)
     * [Typography](#typograhy)
-    * [Imagery](#imagery)
     * [Wireframes](#wireframes)
 
 * [Features](#features)
